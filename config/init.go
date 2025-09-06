@@ -1,14 +1,17 @@
 package config
 
 import (
-	"github.com/BurntSushi/toml"
+	"fmt"
 	"path"
 	"path/filepath"
 	"runtime"
+
+	"github.com/BurntSushi/toml"
 )
 
 func init() {
 	currentAbPath := getCurrentAbPathByCaller()
+	fmt.Println("currentAbPath=", currentAbPath)
 	tomlFile, err := filepath.Abs(currentAbPath + "/configV21.toml")
 	//tomlFile, err := filepath.Abs(currentAbPath + "/configV22.toml")
 	if err != nil {
