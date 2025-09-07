@@ -2,9 +2,10 @@ package models
 
 import (
 	"errors"
-	"gorm.io/gorm"
 	"pledge-backend/db"
 	"pledge-backend/utils"
+
+	"gorm.io/gorm"
 )
 
 type PoolData struct {
@@ -32,6 +33,7 @@ func (t *PoolData) SavePoolData(chainId, poolId string, poolData *PoolData) erro
 	poolData.UpdatedAt = nowDateTime
 	err := db.Mysql.Table("pooldata").Where("chain_id=? and pool_id=?", chainId, poolId).First(&t).Debug().Error
 	if err != nil {
+		// 数据不存在，就插入
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			poolData.CreatedAt = nowDateTime
 			err = db.Mysql.Table("pooldata").Create(poolData).Debug().Error
@@ -42,7 +44,7 @@ func (t *PoolData) SavePoolData(chainId, poolId string, poolData *PoolData) erro
 			return errors.New("record select err " + err.Error())
 		}
 	}
-
+	// 数据存在就更新
 	err = db.Mysql.Table("pooldata").Where("chain_id=? and pool_id=?", chainId, poolId).Updates(poolData).Debug().Error
 	if err != nil {
 		return err

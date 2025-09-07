@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourcePerFileMappings">
+    <file url="file://$PROJECT_DIR$/db/pledge.sql" value="fcc18d8c-deed-4740-8110-e9795576b457" />
     <file url="file://$APPLICATION_CONFIG_DIR$/consoles/db/fcc18d8c-deed-4740-8110-e9795576b457/console.sql" value="fcc18d8c-deed-4740-8110-e9795576b457" />
   </component>
 </project>

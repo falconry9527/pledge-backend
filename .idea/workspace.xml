@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="redis">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" afterDir="false" />
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="validator">
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/data_source_mapping.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models/init_table.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/init_table.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/validate/validator.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/validate/validator.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pledge_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/pledge_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule/models/poolData.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/models/poolData.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule/tasks/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/tasks/task.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,18 +20,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "falconry9527"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;falconry9527&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/falconry9527/pledge-backend.git",
-    "accountId": "8efeddaa-fedd-4f87-afae-32ae37adccc8"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/falconry9527/pledge-backend.git&quot;,
+    &quot;accountId&quot;: &quot;8efeddaa-fedd-4f87-afae-32ae37adccc8&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -42,11 +43,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Go Build.go build pledge_api.go.executor": "Run",
+    "Go Build.go build pledge_task.go.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.GoLinterPluginOnboarding": "true",
     "RunOnceActivity.GoLinterPluginStorageMigration": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.go.formatter.settings.were.checked": "true",
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
@@ -66,7 +69,7 @@
     ]
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Go Build.go build pledge_task.go">
     <configuration name="go build pledge_api.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="pledge-backend" />
       <working_directory value="$PROJECT_DIR$" />
@@ -76,8 +79,18 @@
       <filePath value="$PROJECT_DIR$/api/pledge_api.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build pledge_task.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pledge-backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="pledge-backend" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/schedule/pledge_task.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build pledge_task.go" />
         <item itemvalue="Go Build.go build pledge_api.go" />
       </list>
     </recent_temporary>
@@ -107,7 +120,8 @@
     <MESSAGE value="init" />
     <MESSAGE value="fix" />
     <MESSAGE value="redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis" />
+    <MESSAGE value="validator" />
+    <option name="LAST_COMMIT_MESSAGE" value="validator" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

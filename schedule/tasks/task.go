@@ -32,7 +32,10 @@ func Task() {
 	//run pool task
 	s := gocron.NewScheduler()
 	s.ChangeLoc(time.UTC)
+
+	// 更新全部 poolbases/pooldata
 	_ = s.Every(2).Minutes().From(gocron.NextTick()).Do(services.NewPool().UpdateAllPoolInfo)
+	// 访问BscPledgeOracle(间接访问 chainlink) ：  token_info.price
 	_ = s.Every(1).Minute().From(gocron.NextTick()).Do(services.NewTokenPrice().UpdateContractPrice)
 	_ = s.Every(2).Hours().From(gocron.NextTick()).Do(services.NewTokenSymbol().UpdateContractSymbol)
 	_ = s.Every(2).Hours().From(gocron.NextTick()).Do(services.NewTokenLogo().UpdateTokenLogo)
