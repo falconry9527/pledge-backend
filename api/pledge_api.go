@@ -31,6 +31,8 @@ func main() {
 	go ws.StartServer()
 
 	// get plgr price from kucoin-exchange
+	// 实时获取 kucoin 交易所 代币的的价格 （plgr 是改项目的代币，目前已经没有了）
+	// 并缓存到redis
 	go kucoin.GetExchangePrice()
 
 	// gin start

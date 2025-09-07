@@ -4,12 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="UpdateTokenLogo">
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="SavePlgrPriceTestNet">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/services/balanceMonitor.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/services/balanceMonitor.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/services/tokenPriceService.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/services/tokenPriceService.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/tasks/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/tasks/task.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/test.go" beforeDir="false" afterPath="$PROJECT_DIR$/test/test.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/kucoin/kucoin.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/kucoin/kucoin.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/pledge_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/pledge_api.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,6 +98,7 @@
             <map>
               <entry key="go build pledge-backend/schedule" value="FAILED" />
               <entry key="go build pledge-backend/test" value="STOPPED" />
+              <entry key="go build pledge_api.go" value="STOPPED" />
               <entry key="go build pledge_task.go" value="STOPPED" />
               <entry key="go build test.go" value="STOPPED" />
             </map>
@@ -107,7 +107,7 @@
       </map>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build test.go">
+  <component name="RunManager" selected="Go Build.go build pledge_api.go">
     <configuration name="go build pledge-backend/schedule" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="pledge-backend" />
       <working_directory value="$PROJECT_DIR$" />
@@ -155,11 +155,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build pledge_api.go" />
         <item itemvalue="Go Build.go build test.go" />
         <item itemvalue="Go Build.go build pledge-backend/test" />
         <item itemvalue="Go Build.go build pledge_task.go" />
         <item itemvalue="Go Build.go build pledge-backend/schedule" />
-        <item itemvalue="Go Build.go build pledge_api.go" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +190,8 @@
     <MESSAGE value="redis" />
     <MESSAGE value="validator" />
     <MESSAGE value="UpdateTokenLogo" />
-    <option name="LAST_COMMIT_MESSAGE" value="UpdateTokenLogo" />
+    <MESSAGE value="SavePlgrPriceTestNet" />
+    <option name="LAST_COMMIT_MESSAGE" value="SavePlgrPriceTestNet" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

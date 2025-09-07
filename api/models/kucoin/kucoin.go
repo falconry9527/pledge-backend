@@ -1,9 +1,11 @@
 package kucoin
 
 import (
-	"github.com/Kucoin/kucoin-go-sdk"
+	"fmt"
 	"pledge-backend/db"
 	"pledge-backend/log"
+
+	"github.com/Kucoin/kucoin-go-sdk"
 )
 
 // ApiKeyVersionV2 is v2 api key version
@@ -23,7 +25,7 @@ func GetExchangePrice() {
 	} else {
 		PlgrPrice = price
 	}
-
+	fmt.Println("-----GetExchangePrice")
 	s := kucoin.NewApiService(
 		kucoin.ApiKeyOption("key"),
 		kucoin.ApiSecretOption("secret"),
@@ -51,8 +53,8 @@ func GetExchangePrice() {
 		return
 	}
 
-	ch := kucoin.NewSubscribeMessage("/market/ticker:PLGR-USDT", false)
-	uch := kucoin.NewUnsubscribeMessage("/market/ticker:PLGR-USDT", false)
+	ch := kucoin.NewSubscribeMessage("/market/ticker:BTC-USDT", false)
+	uch := kucoin.NewUnsubscribeMessage("/market/ticker:BTC-USDT", false)
 
 	if err := c.Subscribe(ch); err != nil {
 		log.Logger.Error(err.Error()) // Handle error
@@ -72,6 +74,7 @@ func GetExchangePrice() {
 				log.Logger.Sugar().Errorf("Failure to read: %s", err.Error())
 				return
 			}
+			fmt.Println("-----t.Price", t.Price)
 			PlgrPriceChan <- t.Price
 			PlgrPrice = t.Price
 			//log.Logger.Sugar().Info("Price ", t.Price)
