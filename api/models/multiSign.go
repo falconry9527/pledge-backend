@@ -3,9 +3,10 @@ package models
 import (
 	"encoding/json"
 	"errors"
-	"gorm.io/gorm"
 	"pledge-backend/api/models/request"
 	"pledge-backend/db"
+
+	"gorm.io/gorm"
 )
 
 // MultiSign multi-sign signature
@@ -35,7 +36,7 @@ func (m *MultiSign) Set(multiSign *request.SetMultiSign) error {
 	if err != nil {
 		return errors.New("record select err " + err.Error())
 	}
-	err = db.Mysql.Table("multi_sign").Where("id=?", m.Id).Create(&MultiSign{
+	err = db.Mysql.Table("multi_sign").Create(&MultiSign{
 		ChainId:          multiSign.ChainId,
 		SpName:           multiSign.SpName,
 		SpToken:          multiSign.SpToken,

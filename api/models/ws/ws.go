@@ -3,12 +3,13 @@ package ws
 import (
 	"encoding/json"
 	"errors"
-	"github.com/gorilla/websocket"
 	"pledge-backend/api/models/kucoin"
 	"pledge-backend/config"
 	"pledge-backend/log"
 	"sync"
 	"time"
+
+	"github.com/gorilla/websocket"
 )
 
 const SuccessCode = 0
@@ -55,7 +56,6 @@ func (s *Server) SendToClient(data string, code int) {
 func (s *Server) ReadAndWrite() {
 
 	errChan := make(chan error)
-
 	Manager.Servers.Store(s.Id, s)
 
 	defer func() {
@@ -81,14 +81,12 @@ func (s *Server) ReadAndWrite() {
 	//read
 	go func() {
 		for {
-
 			_, message, err := s.Socket.ReadMessage()
 			if err != nil {
 				log.Logger.Sugar().Error(s.Id+" ReadMessage err ", err)
 				errChan <- err
 				return
 			}
-
 			//update heartbeat time
 			if string(message) == "ping" || string(message) == `"ping"` || string(message) == "'ping'" {
 				s.LastTime = time.Now().Unix()
@@ -114,6 +112,7 @@ func (s *Server) ReadAndWrite() {
 	}
 }
 
+// 读取  kucoin.PlgrPriceChan 的数据, 并发送到 websocket
 func StartServer() {
 	log.Logger.Info("WsServer start")
 	for {
