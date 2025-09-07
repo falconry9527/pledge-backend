@@ -12,7 +12,7 @@ import (
 const ApiKeyVersionV2 = "2"
 
 var PlgrPrice = "0.0027"
-var PlgrPriceChan = make(chan string, 2)
+var PlgrPriceChan = make(chan string, 10)
 
 func GetExchangePrice() {
 
@@ -74,7 +74,7 @@ func GetExchangePrice() {
 				log.Logger.Sugar().Errorf("Failure to read: %s", err.Error())
 				return
 			}
-			fmt.Println("-----t.Price", t.Price)
+			//fmt.Println("-----t.Price", t.Price)
 			PlgrPriceChan <- t.Price
 			PlgrPrice = t.Price
 			//log.Logger.Sugar().Info("Price ", t.Price)

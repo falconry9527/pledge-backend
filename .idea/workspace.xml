@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="SavePlgrPriceTestNet">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" afterDir="false" />
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="kucoin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/models/kucoin/kucoin.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/kucoin/kucoin.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pledge_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/pledge_api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/ws/ws.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/ws/ws.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +190,8 @@
     <MESSAGE value="validator" />
     <MESSAGE value="UpdateTokenLogo" />
     <MESSAGE value="SavePlgrPriceTestNet" />
-    <option name="LAST_COMMIT_MESSAGE" value="SavePlgrPriceTestNet" />
+    <MESSAGE value="kucoin" />
+    <option name="LAST_COMMIT_MESSAGE" value="kucoin" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

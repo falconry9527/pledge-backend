@@ -113,6 +113,7 @@ func (s *Server) ReadAndWrite() {
 }
 
 // 读取  kucoin.PlgrPriceChan 的数据, 并发送到 websocket
+// kucoin.PlgrPriceChan 的数据写入在方法 ：  kucoin.GetExchangePrice() （PlgrPriceChan <- t.Price）
 func StartServer() {
 	log.Logger.Info("WsServer start")
 	for {
