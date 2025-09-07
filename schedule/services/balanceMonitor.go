@@ -22,11 +22,13 @@ func NewBalanceMonitor() *BalanceMonitor {
 
 // Monitor Sending email when balance is insufficient
 func (s *BalanceMonitor) Monitor() {
-
 	//check on bsc test-net
+	// 获取账户余额
 	tokenPoolBalance, err := s.GetBalance(config.Config.TestNet.NetUrl, config.Config.TestNet.PledgePoolToken)
+	// eth 链的 基本单位 10的18次方wei
 	thresholdPoolToken, ok := new(big.Int).SetString(config.Config.Threshold.PledgePoolTokenThresholdBnb, 10)
 	if ok && (err == nil) && (tokenPoolBalance.Cmp(thresholdPoolToken) <= 0) {
+		//  tokenPoolBalance < thresholdPoolToken : 发送邮件
 		emailBody, err := s.EmailBody(config.Config.TestNet.PledgePoolToken, "TBNB", tokenPoolBalance.String(), thresholdPoolToken.String())
 		if err != nil {
 			log.Logger.Error(err.Error())
@@ -37,21 +39,6 @@ func (s *BalanceMonitor) Monitor() {
 			}
 		}
 	}
-
-	//check on bsc main-net
-	// tokenPoolBalance, err = s.GetBalance(config.Config.MainNet.NetUrl, config.Config.MainNet.PledgePoolToken)
-	// thresholdPoolToken, ok = new(big.Int).SetString(config.Config.Threshold.PledgePoolTokenThresholdBnb, 10)
-	// if ok && (err == nil) && (tokenPoolBalance.Cmp(thresholdPoolToken) <= 0) {
-	// 	emailBody, err := s.EmailBody(config.Config.MainNet.PledgePoolToken, "BNB", tokenPoolBalance.String(), thresholdPoolToken.String())
-	// 	if err != nil {
-	// 		log.Logger.Error(err.Error())
-	// 	} else {
-	// 		err = utils.SendEmail(emailBody, 2)
-	// 		if err != nil {
-	// 			log.Logger.Error(err.Error())
-	// 		}
-	// 	}
-	// }
 }
 
 // GetBalance get balance of ERC20 token

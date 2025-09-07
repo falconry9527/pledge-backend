@@ -283,6 +283,7 @@ func (s *TokenPrice) SavePlgrPriceTestNet() {
 		return
 	}
 
+	// 如果需要更新，就要设置 privateKeyEcdsa : 以太坊账户私钥
 	auth, err := bind.NewKeyedTransactorWithChainID(privateKeyEcdsa, big.NewInt(utils.StringToInt64(config.Config.TestNet.ChainId)))
 	if err != nil {
 		log.Logger.Error(err.Error())
