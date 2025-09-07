@@ -19,6 +19,8 @@ func BindingValidator() {
 	// 1. 结构体标记
 	// Password string `json:"password" binding:"required,IsPassword"` // 使用自定义验证
 	// 2. 调用验证函数
-	// validator.Verify(&req)
+	// 		if err := validator.Verify(&req); err != nil {
+	//			return
+	//		}
 
 }
