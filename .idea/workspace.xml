@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="redis">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/pledge_api.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/pledge_api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/static/static.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/static/static.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/controllers/priceController.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/controllers/priceController.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,9 +104,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <MESSAGE value="fix" />
     <MESSAGE value="redis" />
-    <option name="LAST_COMMIT_MESSAGE" value="redis" />
+    <MESSAGE value="gin" />
+    <MESSAGE value="fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
