@@ -34,7 +34,7 @@ func main() {
 	go kucoin.GetExchangePrice()
 
 	// gin start
-	gin.SetMode(gin.ReleaseMode)
+	//gin.SetMode(gin.ReleaseMode)
 	app := gin.Default()
 	staticPath := static.GetCurrentAbPathByCaller()
 	fmt.Println("staticPath=", staticPath)
