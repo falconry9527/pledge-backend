@@ -15,4 +15,10 @@ func BindingValidator() {
 		_ = v.RegisterValidation("CheckUserAccount", CheckUserAccount)               //检查用户账号是否合法
 		_ = v.RegisterValidation("OnlyOne", OnlyOne)                                 //字段唯一性约束
 	}
+	// 这些注册的方法，可以在 结构体中直接使用,例如
+	// 1. 结构体标记
+	// Password string `json:"password" binding:"required,IsPassword"` // 使用自定义验证
+	// 2. 调用验证函数
+	// validator.Verify(&req)
+
 }

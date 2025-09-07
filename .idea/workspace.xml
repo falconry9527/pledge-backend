@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="fix">
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="redis">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/configV21.toml" beforeDir="false" afterPath="$PROJECT_DIR$/config/configV21.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/init.go" beforeDir="false" afterPath="$PROJECT_DIR$/config/init.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/db/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/models/init_table.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/models/init_table.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/validate/validator.go" beforeDir="false" afterPath="$PROJECT_DIR$/api/validate/validator.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +106,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="redis" />
+    <option name="LAST_COMMIT_MESSAGE" value="redis" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
