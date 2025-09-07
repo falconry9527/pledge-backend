@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="validator">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/fcc18d8c-deed-4740-8110-e9795576b457.xml" afterDir="false" />
+    <list default="true" id="36e29c2f-837a-474f-8a25-50c7228e41f3" name="Changes" comment="UpdateTokenLogo">
+      <change afterPath="$PROJECT_DIR$/test/test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/schedule/tasks/task.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/tasks/task.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule/services/tokenLogoService.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/services/tokenLogoService.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/schedule/services/tokenSymbolService.go" beforeDir="false" afterPath="$PROJECT_DIR$/schedule/services/tokenSymbolService.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
   </component>
   <component name="GOROOT" url="file://$USER_HOME$/go_path/pkg/mod/golang.org/toolchain@v0.0.1-go1.24.6.darwin-amd64" />
   <component name="Git.Settings">
@@ -39,36 +46,85 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Go Build.go build pledge_api.go.executor&quot;: &quot;Run&quot;,
-    &quot;Go Build.go build pledge_task.go.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.GoLinterPluginOnboarding&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.GoLinterPluginStorageMigration&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.go.modules.go.list.on.any.changes.was.set&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;go.sdk.automatically.set&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/thor/Downloads/ProjectBreakdown-Pledge-main/pledge-backend&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultGoTemplateProperty": "Go File",
+    "Go Build.go build pledge-backend/schedule.executor": "Run",
+    "Go Build.go build pledge-backend/test.executor": "Run",
+    "Go Build.go build pledge_api.go.executor": "Run",
+    "Go Build.go build pledge_task.go.executor": "Run",
+    "Go Build.go build test.go.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.GoLinterPluginOnboarding": "true",
+    "RunOnceActivity.GoLinterPluginStorageMigration": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.go.formatter.settings.were.checked": "true",
+    "RunOnceActivity.go.migrated.go.modules.settings": "true",
+    "RunOnceActivity.go.modules.go.list.on.any.changes.was.set": "true",
+    "git-widget-placeholder": "main",
+    "go.import.settings.migrated": "true",
+    "go.sdk.automatically.set": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "/Users/thor/Downloads/ProjectBreakdown-Pledge-main/pledge-backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "run.configurations.included.in.services": "true",
+    "to.speed.mode.migration.done": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ]
   }
-}</component>
-  <component name="RunManager" selected="Go Build.go build pledge_task.go">
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/test" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="GoApplicationRunConfiguration" />
+      </set>
+    </option>
+    <option name="configurationStatuses">
+      <map>
+        <entry key="GoApplicationRunConfiguration">
+          <value>
+            <map>
+              <entry key="go build pledge-backend/schedule" value="FAILED" />
+              <entry key="go build pledge-backend/test" value="STOPPED" />
+              <entry key="go build pledge_task.go" value="STOPPED" />
+              <entry key="go build test.go" value="STOPPED" />
+            </map>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="RunManager" selected="Go Build.go build pledge-backend/test">
+    <configuration name="go build pledge-backend/schedule" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pledge-backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="pledge-backend/schedule" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/schedule/test.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build pledge-backend/test" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pledge-backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <package value="pledge-backend/test" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/test/test.go" />
+      <method v="2" />
+    </configuration>
     <configuration name="go build pledge_api.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="pledge-backend" />
       <working_directory value="$PROJECT_DIR$" />
@@ -87,9 +143,21 @@
       <filePath value="$PROJECT_DIR$/schedule/pledge_task.go" />
       <method v="2" />
     </configuration>
+    <configuration name="go build test.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="pledge-backend" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <package value="pledge-backend" />
+      <directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$/test/test.go" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build pledge-backend/test" />
+        <item itemvalue="Go Build.go build test.go" />
         <item itemvalue="Go Build.go build pledge_task.go" />
+        <item itemvalue="Go Build.go build pledge-backend/schedule" />
         <item itemvalue="Go Build.go build pledge_api.go" />
       </list>
     </recent_temporary>
@@ -120,7 +188,8 @@
     <MESSAGE value="fix" />
     <MESSAGE value="redis" />
     <MESSAGE value="validator" />
-    <option name="LAST_COMMIT_MESSAGE" value="validator" />
+    <MESSAGE value="UpdateTokenLogo" />
+    <option name="LAST_COMMIT_MESSAGE" value="UpdateTokenLogo" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>

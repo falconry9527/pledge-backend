@@ -40,6 +40,7 @@ func (s *TokenSymbol) UpdateContractSymbol() {
 			err, symbol = s.GetContractSymbolOnTestNet(t.Token, config.Config.TestNet.NetUrl)
 		} else if t.ChainId == config.Config.MainNet.ChainId {
 			if t.AbiFileExist == 0 {
+				// 根据 Token 获取 abi 文件，并保存到本地
 				err = s.GetRemoteAbiFileByToken(t.Token, t.ChainId)
 				if err != nil {
 					log.Logger.Sugar().Error("UpdateContractSymbol GetRemoteAbiFileByToken err ", t.Symbol, t.ChainId, err)

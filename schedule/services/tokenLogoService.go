@@ -21,8 +21,8 @@ func NewTokenLogo() *TokenLogo {
 }
 
 func (s *TokenLogo) UpdateTokenLogo() {
-
 	// update remote logo
+	// PancakeSwap 默认请求 PancakeSwap 前100（按照名字排名） 的代币信息
 	res, err := utils.HttpGet(config.Config.Token.LogoUrl, map[string]string{})
 	if err != nil {
 		log.Logger.Sugar().Info("UpdateTokenLogo HttpGet err", err)
@@ -52,6 +52,7 @@ func (s *TokenLogo) UpdateTokenLogo() {
 	}
 
 	//update local logo,Local logos have high weight,so execute later, local logos are divided by name
+	// 本地配置的代币信息
 	for _, v := range LocalTokenLogo {
 		for _, t := range v {
 			if t["token"] == "" {
