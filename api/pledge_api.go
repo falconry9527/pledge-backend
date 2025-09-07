@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"pledge-backend/api/middlewares"
 	"pledge-backend/api/models"
 	"pledge-backend/api/models/kucoin"
@@ -36,6 +37,8 @@ func main() {
 	gin.SetMode(gin.ReleaseMode)
 	app := gin.Default()
 	staticPath := static.GetCurrentAbPathByCaller()
+	fmt.Println("staticPath=", staticPath)
+	// 把 staticPath  目录的资源文件，映射到网络 relativePath
 	app.Static("/storage/", staticPath)
 	app.Use(middlewares.Cors()) // 「 Cross domain Middleware 」
 	routes.InitRoute(app)
